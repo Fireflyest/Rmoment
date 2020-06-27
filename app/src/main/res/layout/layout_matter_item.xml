@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/matter_item_point"
+        app:layout_constraintStart_toStartOf="@+id/matter_item_point"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/matter_item_point"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circle_primary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/matter_item_card" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matter_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_foreground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/matter_item_point"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/matter_item_moment"
+            style="@style/text_clickable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/matter_item_content"
+            style="@style/text_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxLines="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/matter_item_title"
+        style="@style/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dp"
+        android:maxLines="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@+id/matter_item_card"
+        app:layout_constraintTop_toTopOf="@id/matter_item_point"
+        app:layout_constraintBottom_toBottomOf="@id/matter_item_point"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

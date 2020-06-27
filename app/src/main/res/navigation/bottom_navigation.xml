@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.fireflyest.rmoment.fragment.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_absorbed"
+        android:name="com.fireflyest.rmoment.fragment.absorbed.AbsorbedFragment"
+        android:label="@string/menu_absorbed"
+        tools:layout="@layout/fragment_absorbed" />
+
+    <fragment
+        android:id="@+id/navigation_matter"
+        android:name="com.fireflyest.rmoment.fragment.matter.MatterFragment"
+        android:label="@string/menu_matter"
+        tools:layout="@layout/fragment_matter" />
+
+    <fragment
+        android:id="@+id/navigation_note"
+        android:name="com.fireflyest.rmoment.fragment.note.NoteFragment"
+        android:label="@string/menu_note"
+        tools:layout="@layout/fragment_note" />
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.fireflyest.rmoment.fragment.mine.MineFragment"
+        android:label="@string/menu_mine"
+        tools:layout="@layout/fragment_mine" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_statistics"-->
+<!--        android:name="com.fireflyest.period.ui.statistics.StatisticsFragment"-->
+<!--        android:label="@string/menu_statistics"-->
+<!--        tools:layout="@layout/fragment_statistics" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_memory"-->
+<!--        android:name="com.fireflyest.period.ui.memory.MemoryFragment"-->
+<!--        android:label="@string/menu_memory"-->
+<!--        tools:layout="@layout/fragment_memory" />-->
+
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_tools"-->
+<!--        android:name="com.fireflyest.period.ui.tools.ToolsFragment"-->
+<!--        android:label="@string/menu_tools"-->
+<!--        tools:layout="@layout/fragment_tools" />-->
+
+</navigation>

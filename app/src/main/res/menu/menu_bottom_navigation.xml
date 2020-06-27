@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_absorbed"
+        android:title="@string/menu_absorbed"
+        android:icon="@drawable/ic_absorbed"/>
+
+    <item
+        android:id="@+id/nav_matter"
+        android:title="@string/menu_matter"
+        android:icon="@drawable/ic_matter"/>
+
+    <item
+        android:id="@+id/nav_note"
+        android:title="@string/menu_note"
+        android:icon="@drawable/ic_note"/>
+
+    <item
+        android:id="@+id/nav_mine"
+        android:title="@string/menu_mine"
+        android:icon="@drawable/ic_mine"/>
+
+</menu>

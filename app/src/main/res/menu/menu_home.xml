@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/absorbed_menu">
+
+        <item
+            android:id="@+id/calender"
+            android:icon="@drawable/ic_calendar"
+            android:title="@string/menu_calendar"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/menu_share"
+            app:showAsAction="ifRoom"/>
+
+    </group>
+
+    <group android:id="@+id/add_menu">
+
+        <item
+            android:id="@+id/add"
+            android:icon="@drawable/ic_add"
+            android:title="@string/menu_add"
+            app:showAsAction="ifRoom"/>
+
+    </group>
+
+    <group android:id="@+id/mine_menu">
+
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/menu_setting"
+            app:showAsAction="ifRoom"/>
+
+    </group>
+
+</menu>

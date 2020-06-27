@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:button="@null"
+        android:id="@+id/matter_day_button"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        style="@style/button_week_style"/>
+
+    <TextView
+        android:id="@+id/matter_day_of_week"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="6dp"
+        style="@style/text_clickable" />
+
+</LinearLayout>

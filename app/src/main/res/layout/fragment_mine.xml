@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.mine.MineFragment">
+
+    <ImageView
+        android:id="@+id/mine_avatar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/mine_avatar" />
+
+    <TextView
+        android:id="@+id/mine_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/mine_avatar"
+        app:layout_constraintStart_toEndOf="@+id/mine_avatar"
+        android:text="@string/mine_username"
+        style="@style/text_bold"/>
+
+    <LinearLayout
+        android:id="@+id/mine_total_day_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_foreground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="@+id/mine_username"
+        app:layout_constraintBottom_toBottomOf="@+id/mine_avatar"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/mine_total_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="center"
+            android:text="150"
+            style="@style/text_emphasis"/>
+
+        <TextView
+            android:id="@+id/mine_total_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mine_total_day"
+            android:layout_gravity="center"
+            style="@style/text_clickable"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mine_total_absorbed_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/circle_foreground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        app:layout_constraintStart_toEndOf="@+id/mine_total_day_button"
+        app:layout_constraintBottom_toBottomOf="@+id/mine_avatar"
+        app:layout_constraintEnd_toStartOf="@+id/mine_average_absorbed_button">
+
+
+        <TextView
+            android:id="@+id/mine_total_absorbed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="center"
+            android:text="243"
+            style="@style/text_emphasis"/>
+
+        <TextView
+            android:id="@+id/mine_total_absorbed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mine_total_absorbed"
+            android:layout_gravity="center"
+            style="@style/text_clickable"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mine_average_absorbed_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/circle_foreground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mine_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/mine_line">
+
+        <TextView
+            android:id="@+id/mine_average_absorbed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="center"
+            android:text="334"
+            style="@style/text_emphasis"/>
+
+        <TextView
+            android:id="@+id/mine_average_absorbed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mine_average_absorbed"
+            android:layout_gravity="center"
+            style="@style/text_clickable"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/mine_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#E9EEF7"
+        app:layout_constraintTop_toBottomOf="@+id/mine_avatar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

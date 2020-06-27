@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">滴刻</string>
+
+    <string name="menu_calendar">日历</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_home">主页</string>
+    <string name="menu_absorbed">专注</string>
+    <string name="menu_matter">事项</string>
+    <string name="menu_note">记录</string>
+    <string name="menu_mine">我的</string>
+    <string name="menu_add">添加</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_plan">计划</string>
+
+    <string name="absorbed_info">专注度</string>
+    <string name="absorbed_study">学习</string>
+    <string name="absorbed_plan">计划</string>
+    <string name="absorbed_exercise">运动</string>
+    <string name="absorbed_change">切换</string>
+    <string name="absorbed_button">进入专注模式</string>
+
+    <string name="matter_morn">早上</string>
+    <string name="matter_noon">下午</string>
+    <string name="matter_night">晚上</string>
+
+    <string name="note_memo">备忘录</string>
+    <string name="note_memoirs">回忆录</string>
+
+    <string name="mine_avatar">Avatar</string>
+    <string name="mine_username">Username</string>
+    <string name="mine_total_day">坚持天数</string>
+    <string name="mine_total_absorbed">总专注度</string>
+    <string name="mine_average_absorbed">平均每天</string>
+
+</resources>

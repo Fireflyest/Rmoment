@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.absorbed.AbsorbedFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/absorbed_day_box"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:background="@drawable/circle_foreground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/text_title"
+            android:id="@+id/absorbed_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/absorbed_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/absorbed_info"
+        android:layout_width="220dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle_foreground"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/absorbed_day_box"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="22dp">
+
+        <TextView
+            android:id="@+id/absorbed_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/absorbed_info" />
+
+        <TextView
+            android:id="@+id/absorbed_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/absorbed_amount_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="256"
+            style="@style/text_max"/>
+
+
+        <View
+            android:id="@+id/absorbed_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="16dp"
+            android:background="#F2F3FA"
+            app:layout_constraintBottom_toTopOf="@+id/absorbed_progress_text"/>
+
+
+        <TextView
+            android:id="@+id/absorbed_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            style="@style/text_light"
+            app:layout_constraintBottom_toTopOf="@+id/absorbed_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="今日进度 1/240"/>
+
+
+        <ProgressBar
+            android:id="@+id/absorbed_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="false"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:max="100"
+            android:progressDrawable="@drawable/circle_progress"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/absorbed_study"
+        android:layout_width="0dp"
+        android:layout_height="142dp"
+        android:background="@drawable/circle_foreground"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toEndOf="@id/absorbed_info"
+        app:layout_constraintTop_toTopOf="@+id/absorbed_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="22dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/absorbed_study" />
+
+        <com.fireflyest.rmoment.view.CircleBarView
+            android:id="@+id/absorbed_study_progress"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            app:start_angle="-90"
+            app:sweep_angle="360"
+            app:progress_color="@color/colorPrimary"
+            app:bg_color="@color/background"
+            app:bar_width="4dp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/absorbed_plan_box"
+        android:layout_width="0dp"
+        android:layout_height="142dp"
+        android:background="@drawable/circle_foreground"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toEndOf="@id/absorbed_info"
+        app:layout_constraintTop_toBottomOf="@+id/absorbed_study"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="22dp">
+
+
+        <TextView
+            android:id="@+id/absorbed_plan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/absorbed_plan"/>
+
+        <TextView
+            android:id="@+id/absorbed_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/absorbed_plan_text"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/text_clickable"
+            android:text="周一到周五非节日"/>
+
+        <Button
+            style="@style/button_circle_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="52dp"
+            android:layout_height="32dp"
+            android:text="@string/absorbed_change" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/absorbed_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/absorbed_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="任务事项与计划1/10 备忘录2"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        style="@style/text_light"/>
+
+    <Button
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@id/absorbed_total"
+        android:layout_margin="16dp"
+        android:text="@string/absorbed_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
