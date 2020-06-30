@@ -37,7 +37,6 @@
         android:padding="12dp"
         app:layout_constraintStart_toStartOf="@+id/mine_username"
         app:layout_constraintBottom_toBottomOf="@+id/mine_avatar"
-
         android:orientation="vertical">
 
 
@@ -46,7 +45,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:layout_gravity="center"
             android:text="150"
             style="@style/text_emphasis"/>
 
@@ -79,7 +77,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:layout_gravity="center"
             android:text="243"
             style="@style/text_emphasis"/>
 
@@ -111,7 +108,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:layout_gravity="center"
             android:text="334"
             style="@style/text_emphasis"/>
 

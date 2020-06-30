@@ -40,14 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.calender:
-                break;
-            case android.R.id.home:
-                drawerLayout.openDrawer(GravityCompat.START);
-                break;
-            default:
-        }
+        if(item.getItemId() == android.R.id.home)drawerLayout.openDrawer(GravityCompat.START);
         return true;
     }
 

@@ -25,6 +25,9 @@
 
     <string name="note_memo">备忘录</string>
     <string name="note_memoirs">回忆录</string>
+    <string name="note_search">搜索</string>
+    <string name="note_timeRank">已切换为时间排序</string>
+    <string name="note_nameRank">已切换为名称排序</string>
 
     <string name="mine_avatar">Avatar</string>
     <string name="mine_username">Username</string>

@@ -44,7 +44,9 @@ public class AbsorbedFragment extends Fragment {
         day = (TextView)root.findViewById(R.id.absorbed_day);
         day.setText(String.format(dayText, CalendarUtil.getMonth(), CalendarUtil.getDay()));
         week = (TextView)root.findViewById(R.id.absorbed_week);
-        week.setText(weekDay[CalendarUtil.getDayOfWeek()-1]);
+        int nowDayOfWeek = CalendarUtil.getDayOfWeek()-1;
+        if(nowDayOfWeek < 0) nowDayOfWeek += 7;
+        week.setText(weekDay[nowDayOfWeek]);
         return root;
     }
 

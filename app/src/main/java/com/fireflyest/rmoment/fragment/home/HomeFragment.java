@@ -122,11 +122,6 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
-//                if (menuItem != null) {
-//                    menuItem.setChecked(false);
-//                } else {
-//                    bottomNavigationView.getMenu().getItem(0).setChecked(false);
-//                }
                 menuItem = bottomNavigationView.getMenu().getItem(position);
                 menuItem.setChecked(true);
             }
@@ -145,5 +140,18 @@ public class HomeFragment extends Fragment {
         inflater.inflate(R.menu.menu_home, menu);
         menu.setGroupVisible(R.id.add_menu, false);
         menu.setGroupVisible(R.id.mine_menu, false);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.share:
+            case R.id.add:
+            case R.id.calender:
+            case R.id.setting:
+                break;
+            default:
+        }
+        return true;
     }
 }

@@ -18,7 +18,6 @@
         android:id="@+id/matter_item_point"
         android:layout_width="12dp"
         android:layout_height="12dp"
-        android:layout_marginBottom="5dp"
         android:background="@drawable/circle_primary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/matter_item_card" />

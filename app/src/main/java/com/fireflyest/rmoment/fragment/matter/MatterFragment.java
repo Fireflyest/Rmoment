@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,10 @@ public class MatterFragment extends Fragment {
 
     private View root;
 
+    private RecyclerView dayRecyclerView;
+    private RecyclerView itemRecyclerView;
+    private ScrollView scrollView;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -36,7 +41,7 @@ public class MatterFragment extends Fragment {
 
         int nowadays = CalendarUtil.getDay();
         int nowDayOfWeek = CalendarUtil.getDayOfWeek()-1;
-        for (int i = -3; i < 9; i++) {
+        for (int i = -3; i < 8; i++) {
             int dayOfWeek = nowDayOfWeek + i;
             int nowDay = nowadays+i;
             if(dayOfWeek < 0){
@@ -50,12 +55,13 @@ public class MatterFragment extends Fragment {
             matterDay.add(new MatterDay(nowDay, dayOfWeek));
         }
 
-        RecyclerView dayRecyclerView = (RecyclerView) root.findViewById((R.id.matter_week_days));
+        dayRecyclerView = (RecyclerView) root.findViewById((R.id.matter_week_days));
         LinearLayoutManager manager1 = new LinearLayoutManager(root.getContext());
         dayRecyclerView.setLayoutManager(manager1);
         manager1.setOrientation(LinearLayoutManager.HORIZONTAL);
         MatterDayAdapter matterDayAdapter = new MatterDayAdapter(matterDay);
         dayRecyclerView.setAdapter(matterDayAdapter);
+
 
 
         matterItem.add(new MatterItem("Test", "数学课", "数学课在二栋505", 649444, 2018));
@@ -73,11 +79,30 @@ public class MatterFragment extends Fragment {
         matterItem.add(new MatterItem("Test", "数学课", "数学课在二栋505", 649444, 2018));
         matterItem.add(new MatterItem("Test", "数学课", "数学课在二栋502", 649444, 2018));
 
-        RecyclerView itemRecyclerView = (RecyclerView) root.findViewById((R.id.matter_items));
+        itemRecyclerView = (RecyclerView) root.findViewById((R.id.matter_items));
         LinearLayoutManager manager2 = new LinearLayoutManager(root.getContext());
         itemRecyclerView.setLayoutManager(manager2);
         MatterItemAdapter matterItemAdapter = new MatterItemAdapter(matterItem);
         itemRecyclerView.setAdapter(matterItemAdapter);
+
+
+        scrollView = (ScrollView)root.findViewById(R.id.matter_scroll);
+        itemRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            boolean hide = false;
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                hide = dy > 0;
+            }
+
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                scrollView.fullScroll(hide ? ScrollView.FOCUS_DOWN : ScrollView.FOCUS_UP);
+            }
+        });
 
 
         return root;

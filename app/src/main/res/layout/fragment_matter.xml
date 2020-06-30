@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matter_scroll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="none"
@@ -11,10 +12,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="80dp">
+        android:paddingBottom="56dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/matter_week_days"
+        <LinearLayout
+            android:id="@+id/matter_week"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -23,7 +24,14 @@
             android:background="@drawable/circle_foreground"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matter_week_days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/matter_items"
@@ -32,7 +40,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            app:layout_constraintTop_toBottomOf="@id/matter_week_days"/>
+            app:layout_constraintTop_toBottomOf="@id/matter_week"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
